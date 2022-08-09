@@ -1,21 +1,16 @@
-<div>
-    <img width="250" style="margin-top: 5%; margin-left: 43%;" alt="Jonaki Logo"
+<div class="w-100 d-flex flex-column justify-contet-center align-items-center">
+    <img width="250" alt="Jonaki Logo"
         src="../assets/jonaki-welfare-trust.png" />
+    <span class="font-weight-700 p-3 bg-primary text-white text-center mt-3 rounded">{{ title }}</span>
 </div>
-<div class="content" role="main">
-    <!-- Highlight Card -->
-    <div class="card highlight-card card-small">
-        <span>{{ title }}</span>
-    </div>
-</div>
-<div>
-    <div style="margin-left: 40%; margin-bottom: 1%; margin-top: 1%;">
-        <label style="padding: 2%; font-weight: 700;">USERNAME : </label>
+<div class="w-100 d-flex flex-column align-items-center">
+    <div class="col-4">
+        <label class="font-weight-700 pt-2">USERNAME : </label>
         <input type="text" class="form-control" id="username" [(ngModel)] = "username" placeholder="Enter username here">
     </div>
-    <div style="margin-left: 40%; margin-bottom: 1%; margin-top: 1%;">
-        <label style="padding: 2%; font-weight: 700;">PASSWORD : </label>
+    <div class="col-4">
+        <label class="font-weight-700 pt-2">PASSWORD : </label>
         <input type="password" class="form-control" id="password" [(ngModel)] = "password" placeholder="Enter password here">
     </div>
-    <button class="btn btn-primary" style="margin-left: 48%; cursor: pointer;" (click)="login()">Login</button>
+    <button class="btn btn-primary mt-3" (click)="login()">Login</button>
 </div>

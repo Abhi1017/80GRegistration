@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+app-login-page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.font-weight-700{
+    font-weight: 700;
+}
+.font-weight-600{
+    font-weight: 600;
+}
+.font-weight-500{
+    font-weight: 500;
+}
+.font-weight-400{
+    font-weight: 400;
+}
+.heading{
+    font-size: x-large;
+}
