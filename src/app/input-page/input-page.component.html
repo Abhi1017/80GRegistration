@@ -1,4 +1,4 @@
-<div class="container px-2 pb-5">
+<div class="container px-2 pb-5" *ngIf="isformShown">
     <div class="w-100 text-center font-weight-700 py-3 heading">TRUST DETAILS</div>
     <div class="row">
         <div class="d-flex flex-column col-sm-6 col-12 px-2">
@@ -109,3 +109,35 @@
         </div>
     </div>
 </div>
+<div *ngIf="!isformShown" class="w-100 d-flex justify-content-center align-items-center flex-wrap sub-heading">
+    <div class="text-center w-100 font-weight-700 p-5 sub-heading">80G Donor Certificate</div>
+    <div class="w-100">
+        <span class="font-weight-700 pe-3">Certificate No. :</span><span></span>
+    </div>
+    <div class="w-100">
+        <span class="font-weight-700 pe-3">Date :</span><span>{{date}}</span>
+    </div>
+    <div class="w-100 pt-5 pb-2">
+        This is to confirm that the Jonaki Welfare Trust recived an amount Rs{{amount}} from {{donorName}} via the
+        Mode of Payment {{mode}} TransuctionID on {{transactionId}}.
+    </div>
+    <div class="w-100">
+        We thank you for your contribution towards the corpus of the Jonaki Welfare Trust and helping support our work.
+    </div>
+    <div class="w-100 d-flex flex-column py-5 font-weight-600">
+        <span>ESTD - 2021, Regd No. - IV-573/2022</span>
+        <span>Address: Kolkata, West Bengal, India.</span>
+        <span>Contact: +91-96742 35050</span>
+        <span>Mail: jonaki.greater.purpose@gmail.com</span>
+    </div>
+    <div class="w-100 text-center pt-5 pb-3">
+        Computer generated recipet - Does not require signature.
+    </div>
+    <div class="w-100 text-center py-1 font-weight-700">
+        Jonaki Welfare Trust PAN Number {{pan}}
+    </div>
+    <div class="w-100 font-weight-700 text-center">
+        Darpan Id : {{darpan}}
+    </div>
+</div>
+<button class="btn btn-primary" (click)="downloadAsPDF();" *ngIf="isformShown">Export To PDF</button>

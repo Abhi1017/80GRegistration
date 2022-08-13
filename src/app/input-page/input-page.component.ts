@@ -24,11 +24,23 @@ export class InputPageComponent implements OnInit {
   transactionId = '';
   amount = 0;
   datePayment = '';
-
+  isformShown = true;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  
+  
+  public downloadAsPDF() {
+    this.isformShown = false;
+    // window.print();
+    setTimeout(() => {
+      window.print();
+      this.isformShown = true;
+    }, 100);
+
+    return; 
   }
 
 }
