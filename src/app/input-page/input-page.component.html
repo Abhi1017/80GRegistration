@@ -117,7 +117,7 @@
     <div class="row mt-2">
         <div class="col-sm-4 col-12 d-flex flex-column px-2">
             <label class="font-weight-700">Amount (Rs.) : </label>
-            <input type="number" class="form-control" id="amount" [(ngModel)]="amount" (ngModelChange)="amountChanged($event)" placeholder="Enter Text Here">
+            <input type="number" class="form-control" id="amount" [(ngModel)]="amount" placeholder="Enter Text Here">
         </div>
 
         <div class="col-sm-4 col-12 d-flex flex-column px-2">
@@ -136,7 +136,7 @@
     </div>
     <div class="w-100 pt-4 pb-1">
         <i>
-            This is to confirm that <b>JONAKI WELFARE TRUST, Regd No. - IV-573/2022</b>, registered under Indian Trust Act, have recived an amount of <b>Rs. {{amount}} (Rupees {{amountInWords}} only)</b> from <b> {{donorName}} (Email - {{donorEmail}} & PAN Number - {{donorPan}})
+            This is to confirm that <b>JONAKI WELFARE TRUST, Regd No. - IV-573/2022</b>, registered under Indian Trust Act, have recived an amount of <b>Rs. {{amount}} (Rupees {{inWords(amount)}})</b> from <b> {{donorName}} (Email - {{donorEmail}} & PAN Number - {{donorPan}})
             </b> via <b> {{mode}} </b> as the Mode of Payment, with Transaction ID as <b>
                 {{transactionId}}
             </b> on <b>{{datePayment | date: 'dd/MM/yyyy'}}.</b>
@@ -153,8 +153,8 @@
             <span class="py-2"> Niti Aayog Darpan Id - {{darpan}} | 12A Registration No. {{twelveAreg}}</span>
             <span>80G Registartion No. {{eightyGreg}} (Applicable for 50% tax exemption)</span>
     </div>
-    <div class="w-100 text-center font-weight-700 pb-1">
-        Computer generated recipet - Does not require signature.
+    <div class="w-100 text-center font-weight-700 pb-2">
+        Computer generated receipt - Does not require signature.
     </div>
     <img width="100%" alt="Jonaki Letter head Down"
         src="../../assets/Jonaki-letter-head- bottom.jpg" />
