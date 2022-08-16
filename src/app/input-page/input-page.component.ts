@@ -34,7 +34,7 @@ export class InputPageComponent implements OnInit {
   amountChanged(event:any) {
     console.log(event);
     if (event && event > 0) {
-      this.amountInWords = 'One lakh fifty thousand';
+      this.amountInWords = 'One thousand one';
     }
   }
   
