@@ -11,7 +11,7 @@ export class InputPageComponent implements OnInit {
   regNo = 'IV - 573/2022';
   darpan = 'WB/2022/0319559';
   twelveAreg = 'AAETJ2477NE20221';
-  eightyGreg = '';
+  eightyGreg = 'AAETJ2477NF20221';
   pan = 'AAETJ2477N';
   contactNo = 9674235050;
   cerRecp = 'Donor';
@@ -25,10 +25,17 @@ export class InputPageComponent implements OnInit {
   amount = 0;
   datePayment = '';
   isformShown = true;
+  amountInWords = '';
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  amountChanged(event:any) {
+    console.log(event);
+    if (event && event > 0) {
+      this.amountInWords = 'One lakh fifty thousand';
+    }
   }
   
   
