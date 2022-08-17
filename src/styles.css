@@ -28,7 +28,12 @@ app-login-page{
 .full-height{
     height:100vh;
 }
-
+.position-absolute{
+  position:absolute;
+}
+.position-relative{
+  position:relative;
+}
 
 .toolbar {
     background-color: #FFBD19; 
