@@ -138,8 +138,12 @@
     <div class="w-100 pt-4 pb-1">
         <i>
 
-            This is to confirm that <b>JONAKI WELFARE TRUST, Regd No. - IV-573/2022</b>, registered under Indian Trust Act, have recived an amount of <b>Rs. {{amount}} ({{inWords(amount)}})</b> from <b> {{donorName}} (Email - {{donorEmail}} & PAN Number - {{donorPan}})
-            </b> via <b> {{mode}} </b> as the Mode of Payment, with Transaction ID as <b>
+            This is to confirm that <b>JONAKI WELFARE TRUST, Regd No. - IV-573/2022</b>, registered under Indian Trust Act, have recived an amount of <b>Rs. {{amount}} ({{inWords(amount)}})</b> from <b> {{donorName}}
+                 (<span *ngIf = 'donorEmail'>Email - {{donorEmail}}</span> <span *ngIf = 'donorEmail && donorPan'> & </span> <span *ngIf = 'donorPan'>PAN Number - {{donorPan}}</span>)
+            </b> via <b> {{mode}} </b> as the Mode of Payment, with 
+            <span *ngIf = "mode == 'Cheque'">Cheque No.</span>
+            <span *ngIf = "mode != 'Cheque'">Transaction ID</span> 
+            as <b>
                 {{transactionId}}
             </b> on <b>{{datePayment | date: 'dd/MM/yyyy'}}.</b>
         </i>
@@ -155,7 +159,7 @@
             <span class="py-2"> Niti Aayog Darpan Id - {{darpan}} | 12A Registration No. {{twelveAreg}}</span>
             <span>80G Registartion No. {{eightyGreg}} (Eligible for 50% tax exemption)</span>
     </div>
-    <div class="w-100 text-center font-weight-700 pb-2">
+    <div class="w-100 text-center font-weight-700 pb-1">
         Computer generated receipt - Does not require signature.
     </div>
     <img width="100%" alt="Jonaki Letter head Down"
